@@ -1,9 +1,5 @@
-
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
 
 
 awk '{printf $1 " " $9 "\n"}' apache-access.log
-
-
-or
-
-awk '{prinf $1 " " $9}' apache-access.log
