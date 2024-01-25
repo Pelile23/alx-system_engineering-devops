@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
+# Parses Apache log files in list format.
+#   Displays the IP and HTTP status code.
 
-
-awk '{printf $1 " " $9 "\n"}' apache-access.log
+awk '{print $1 " " $9}' apache-access.log
