@@ -3,5 +3,6 @@
 
 for (( f=0; f<10; f++ ))
 do
-  echo "Best School"
+  echo "echo: Best School"
+  printf "printf: Best School\n"
 done
