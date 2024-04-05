@@ -23,20 +23,20 @@ listen hbnb
     balance roundrobin
     option httpclose
     option forwardfor
-    server 520310-web-01 34.229.161.131:80 check
-    server 520310-web-02 54.89.46.50:80 check
-
+    server 398114-web-01 54.81.255.86:80 check
+    server 398114-web-02 100.26.166.24:80 check
 frontend haproxy_balancer
     bind *:80
     mode http
     default_backend webservers
 
 frontend www-https
-    bind   *:443 ssl crt /etc/letsencrypt/live/bytedude.tech/bytedude.tech.pem
+    bind   *:443 ssl crt /etc/letsencrypt/live/afripark.tech/afripark.tech.pem
     default_backend webservers
 
 backend webservers
     balance roundrobin
     redirect scheme https if !{ ssl_fc }
-    server 520310-web-01 34.229.161.131:80 check
-    server 520310-web-02 54.89.46.50:80 check
+    server 398114-web-01 54.81.255.86:80 check
+    server 398114-web-02 100.26.166.24:80 check
+
